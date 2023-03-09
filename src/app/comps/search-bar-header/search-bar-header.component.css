@@ -1,0 +1,16 @@
+.search-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.search-header__ct-name {
+    font-size: 2rem;
+}
+
+.search-header__search-bar {
+    margin: 0 1rem;
+    width: 45rem;
+}
