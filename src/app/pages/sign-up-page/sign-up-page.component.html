@@ -1,16 +1,40 @@
 <app-search-bar-header></app-search-bar-header>
 
 
-<div class="signup-form-container">
-    <p-card header="Signup">
-        <p class="m-0">
-           Already have an Account? Sign in here
-        </p>
-        <label htmlFor="username">Username:</label>
-        <input class="username_input" id="username" type="text" pInputText />
+<div class="sign-container">
+    <p-card *ngIf="!displaySignupForm" header="Sign In">
+        <div class="sign-in-form">
+            <p>
+                Already have an Account? Sign in here
+            </p>
+            <label htmlFor="sign-in-username">Username:</label>
+            <input class="form-input" id="sign-in-username" type="text" pInputText />
 
-        <label htmlFor="password">Password:</label>
-        <br>
-        <p-password class="password_input" id="password" [feedback]="false"></p-password>
+            <label htmlFor="sign-in-password">Password:</label>
+            <br>
+            <p-password id="sign-in-password" [feedback]="false"></p-password>
+            <p-button label="Login"></p-button>
+        </div>
+        <p-divider></p-divider>
+        <div>
+            <p>Or Signup</p>
+            <label htmlFor="username">Email:</label>
+            <input class="form-input" id="email" type="text" pInputText />
+            <p-button label="Next" styleClass="p-button-success" (click)="showSignupForm()"></p-button>
+        </div>
+    </p-card>
+    <p-card *ngIf="displaySignupForm" header="Sign Up">
+        <div class="sign-up-form">
+            <p>
+                Create a new account
+            </p>
+            <label htmlFor="sign-up-username">Username:</label>
+            <input class="form-input" id="sign-up-username" placeholder="Create a username..." type="text" pInputText />
+
+            <label htmlFor="sign-up-password">Password:</label>
+            <br>
+            <p-password id="sign-up-password" [feedback]="false" placeholder="Create a password..."></p-password>
+            <p-button class="sign-up-button" label="Submit" styleClass="p-button-success" (click)="showSignupForm()"></p-button>
+        </div>
     </p-card>
 </div>

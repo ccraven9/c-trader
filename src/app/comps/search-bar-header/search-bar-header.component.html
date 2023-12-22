@@ -1,8 +1,8 @@
 <div class="search-header">
     <span>
-        <span class="search-header__ct-name">Collectable Trader</span>
-        <input class="search-header__search-bar" type="text" pInputText />
-        <p-button label="Sell" (onClick)="navigateToSellPage()"></p-button>
+        <span class="search-header__ct-name" (click)="navigateToHomePage()">Collectable Trader</span>
+        <input class="search-header__search-bar" placeholder="Search for cards" type="text" pInputText />
+        <p-button label="Sell" (click)="navigateToSellPage()"></p-button>
     </span>
-    <p-button label="Signup" (onClick)="navigateToSignUpPage()"></p-button>
+    <p-button label="Signup" (click)="navigateToSignUpPage()"></p-button>
 </div>

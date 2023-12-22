@@ -16,4 +16,8 @@ export class SearchBarHeaderComponent {
   navigateToSignUpPage(){
     this.router.navigate(['signup']);
   }
+
+  navigateToHomePage(){
+    this.router.navigate(['/']);
+  }
 }

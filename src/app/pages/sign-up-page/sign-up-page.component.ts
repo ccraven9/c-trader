@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SignUpPageComponent {
 
+  displaySignupForm = false;
+
+
+  showSignupForm() {
+    this.displaySignupForm = true;
+  }
+
 }
