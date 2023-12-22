@@ -9,9 +9,9 @@ import { DividerModule } from 'primeng/divider';
 import { FieldsetModule } from 'primeng/fieldset';
 
 import { AppComponent } from './app.component';
-import { SearchBarHeaderComponent } from './comps/search-bar-header/search-bar-header.component';
-import { SubMenuBarComponent } from './comps/sub-menu-bar/sub-menu-bar.component';
-import { CardDisplayFeatureComponent } from './comps/card-display-feature/card-display-feature.component';
+import { SearchBarHeaderComponent } from './components/search-bar-header/search-bar-header.component';
+import { SubMenuBarComponent } from './components/sub-menu-bar/sub-menu-bar.component';
+import { CardDisplayFeatureComponent } from './components/card-display-feature/card-display-feature.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellPageComponent } from './pages/sell-page/sell-page.component';
 import { AppRoutingModule } from './app-routing.module';
