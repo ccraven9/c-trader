@@ -1,0 +1,15 @@
+.signup-form-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.username_input{
+    width: 100%;
+}
+
+.password_input{
+    width: 100%;
+    display: block;
+}

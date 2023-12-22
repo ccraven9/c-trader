@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
+import { FieldsetModule } from 'primeng/fieldset';
+
+import { AppComponent } from './app.component';
 import { SearchBarHeaderComponent } from './comps/search-bar-header/search-bar-header.component';
 import { SubMenuBarComponent } from './comps/sub-menu-bar/sub-menu-bar.component';
-import { DividerModule } from 'primeng/divider';
 import { CardDisplayFeatureComponent } from './comps/card-display-feature/card-display-feature.component';
-import { FieldsetModule } from 'primeng/fieldset';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellPageComponent } from './pages/sell-page/sell-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 
 
 @NgModule({
@@ -17,7 +24,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     SearchBarHeaderComponent,
     SubMenuBarComponent,
-    CardDisplayFeatureComponent
+    CardDisplayFeatureComponent,
+    SellPageComponent,
+    LandingPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +35,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputTextModule,
     DividerModule,
     FieldsetModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CardModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

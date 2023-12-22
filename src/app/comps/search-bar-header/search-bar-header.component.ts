@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar-header',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-bar-header.component.css']
 })
 export class SearchBarHeaderComponent {
+  constructor( private router: Router ) {}
 
+  navigateToSellPage(){
+    this.router.navigate(['sell']);
+  }
+
+  navigateToSignUpPage(){
+    this.router.navigate(['signup']);
+  }
 }
