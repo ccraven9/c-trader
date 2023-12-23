@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { PrimengModule } from './modules/primeng.module';
+import { DisplayCardComponent } from './components/card-display-feature/display-card/display-card.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PrimengModule } from './modules/primeng.module';
     CardDisplayFeatureComponent,
     SellPageComponent,
     LandingPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    DisplayCardComponent
   ],
   imports: [
     BrowserModule,
