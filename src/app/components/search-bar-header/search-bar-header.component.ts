@@ -20,4 +20,8 @@ export class SearchBarHeaderComponent {
   navigateToHomePage(){
     this.router.navigate(['/']);
   }
+
+  navigateToSearchResultsPage(){
+    this.router.navigate(['search-results']);
+  }
 }
