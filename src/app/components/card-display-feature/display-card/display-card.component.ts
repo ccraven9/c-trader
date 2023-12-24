@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class DisplayCardComponent {
 
+  listingTitle = '';
+  setPrefix = '';
+  totalBids = 0;
+  currentPrice = 0.0;
+  timeRemaining: string = "";
+  imageArt: string= "";
+  description = "";
+
 }

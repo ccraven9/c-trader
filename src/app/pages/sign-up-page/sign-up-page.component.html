@@ -20,7 +20,7 @@
             <p>Or Signup</p>
             <label htmlFor="username">Email:</label>
             <input class="form-input" id="email" type="text" pInputText />
-            <p-button label="Next" styleClass="p-button-success" (click)="showSignupForm()"></p-button>
+            <p-button label="Next" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
         </div>
     </p-card>
     <p-card *ngIf="displaySignupForm" header="Sign Up">
@@ -34,7 +34,7 @@
             <label htmlFor="sign-up-password">Password:</label>
             <br>
             <p-password id="sign-up-password" [feedback]="false" placeholder="Create a password..."></p-password>
-            <p-button class="sign-up-button" label="Submit" styleClass="p-button-success" (click)="showSignupForm()"></p-button>
+            <p-button class="sign-up-button" label="Submit" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
         </div>
     </p-card>
 </div>

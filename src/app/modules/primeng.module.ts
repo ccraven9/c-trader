@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { FieldsetModule } from 'primeng/fieldset';
+import { ChipModule } from 'primeng/chip';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { FieldsetModule } from 'primeng/fieldset';
     InputTextModule,
     PasswordModule,
     DividerModule,
-    FieldsetModule
+    FieldsetModule,
+    ChipModule
   ]
 })
 export class PrimengModule { }

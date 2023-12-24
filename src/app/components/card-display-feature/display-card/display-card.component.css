@@ -1,0 +1,13 @@
+.playing-card-container{
+    max-width: 14rem;
+    margin: auto;
+    img {
+        margin-top: 1rem;
+    }
+}
+
+.bid-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

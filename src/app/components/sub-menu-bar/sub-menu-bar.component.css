@@ -7,4 +7,10 @@
 
 .sub-menu__category {
     margin: 0 1rem;
+    /* cursor: pointer; */
+    .p-button.p-button-text {
+        color: black;
+    }
+
 }
+
