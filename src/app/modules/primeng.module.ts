@@ -9,6 +9,9 @@ import { DividerModule } from 'primeng/divider';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ChipModule } from 'primeng/chip';
 import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
+import { MenuModule } from 'primeng/menu';
+import { TagModule } from 'primeng/tag';
+
 
 @NgModule({
   declarations: [],
@@ -23,6 +26,8 @@ import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
     FieldsetModule,
     ChipModule,
     DataViewModule,
+    MenuModule,
+    TagModule,
   ],
   providers: [
     DataViewLayoutOptions

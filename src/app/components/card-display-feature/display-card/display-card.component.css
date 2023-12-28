@@ -6,6 +6,14 @@
     }
 }
 
+.listing-data {
+    text-align: center;
+    .p-chip {
+        margin: 0rem .1rem;
+        color: black;
+    }
+}
+
 .bid-button {
     display: flex;
     align-content: center;

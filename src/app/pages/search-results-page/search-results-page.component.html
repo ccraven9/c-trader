@@ -1,4 +1,30 @@
 <app-search-bar-header></app-search-bar-header>
 
-<div>
+<!-- Add Menu for Sorting to the left side of the screen -->
+<div class="auction-list-container">
+    <p-dataView #dv [value]="products">
+        <ng-template let-product pTemplate="listItem">
+            <div class="col-12">
+                <div class="auction-list-item">
+                    <div>
+                        <img class="auction-list-item__thumbnail-image" alt="Card"
+                            src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />
+                            
+                    </div>
+                    <div class="auction-list-item__listing-information">
+                        <h1>{{product.listingTitle}}</h1>
+                        <h3>{{ product.setPrefix }}</h3>
+                        <p>{{ product.previewDescription }} </p>
+                        <p-tag [value]=product.condition></p-tag>
+                    </div>
+                    <div class="auction-list-item__bid-information">
+                        <p>Current Bid: <p-chip>{{ product.currentPrice | currency }}</p-chip> </p>
+                        <p>Total Bids: <p-chip>{{ product.totalBids }}</p-chip> </p>
+                        <p>Time Remaning: <p-chip>{{ product.timeRemaining }}</p-chip> </p>
+                        <p-button label="Bid Now"></p-button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
 </div>
