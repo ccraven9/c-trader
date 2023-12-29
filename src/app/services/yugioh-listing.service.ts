@@ -6,7 +6,7 @@ import { YuGiOhCardListing } from '../models/yugioh-auction.model';
 })
 export class YugiohListingService {
 
-  yugiohListings: YuGiOhCardListing[] = [];
+  private yugiohListings: YuGiOhCardListing[] = [];
 
   constructor() {
     let bewdListing: YuGiOhCardListing = {
@@ -22,6 +22,10 @@ export class YugiohListingService {
     }
 
     this.yugiohListings = [bewdListing, bewdListing];
+   }
+
+   getAuctionListings(){
+    return this.yugiohListings;
    }
 
 

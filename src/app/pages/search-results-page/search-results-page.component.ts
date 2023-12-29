@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { YuGiOhCardListing } from 'src/app/models/yugioh-auction.model';
+import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
 
 @Component({
   selector: 'app-search-results-page',
@@ -8,76 +10,14 @@ import { Router } from '@angular/router';
 })
 export class SearchResultsPageComponent {
 
-  constructor( private router: Router ) {}
+  products: YuGiOhCardListing[];
 
-  products = [
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
-    },
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
+  constructor(private router: Router, private yugiListService: YugiohListingService) {
+    this.products = this.yugiListService.getAuctionListings();
+  }
 
-    },
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
-
-    },
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
-
-    },
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
-
-    },
-    {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      imageArt: 'assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp',
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition'
-    },]
-
-    navigateToAuction() {
-      this.router.navigate(['auction'])
-    }
+  navigateToAuction() {
+    this.router.navigate(['auction'])
+  }
 
 }
