@@ -15,6 +15,7 @@ import { DisplayCardComponent } from './components/card-display-feature/display-
 import { SearchResultsPageComponent } from './pages/search-results-page/search-results-page.component';
 import { AuctionPageComponent } from './pages/auction-page/auction-page.component';
 import { SearchResultMenuComponent } from './components/search-result-menu/search-result-menu.component';
+import { YugiohListingService } from './services/yugioh-listing.service';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SearchResultMenuComponent } from './components/search-result-menu/searc
     PrimengModule,
     AppRoutingModule
   ],
+  providers: [YugiohListingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
