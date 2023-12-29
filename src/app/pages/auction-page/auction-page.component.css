@@ -4,15 +4,19 @@
 
 .auction-header {
     display: flex;
+
     .title {
         margin-right: 5rem;
-        .information-tags{
+
+        .information-tags {
             margin-top: 1rem;
         }
+
         p-tag {
             margin-right: .2rem;
         }
     }
+
     .featured-image {
         max-width: 30rem;
         padding: 5rem;
@@ -20,12 +24,14 @@
         box-shadow: 0 2px 2px #0a10143d, 0 0 2px #0a10141f;
     }
 
-    .bidding-container{
+    .bidding-container {
+
         .seller-data {
             height: 4.9925rem;
             border: 1px solid #ced4da;
             border-radius: 0.375rem;
             margin-bottom: 2rem;
+
             .seller-chips {
                 p-chip {
                     margin-right: .2rem;
@@ -36,14 +42,16 @@
         .bid-area {
             display: flex;
         }
-       
+
         .bid-input {
             display: flex;
             flex-direction: column;
             margin: 0rem 1rem 0rem 0rem;
-            .currency-display{
+
+            .currency-display {
                 margin-left: .8rem;
             }
+
             div {
                 margin-bottom: .8rem;
             }
@@ -53,11 +61,12 @@
             margin: 1rem 0rem;
         }
 
-        .add-to-list{
+        .add-to-list {
             margin-bottom: 1rem;
         }
 
         .additonal-images-list {
+
             .card-list {
                 display: flex;
                 justify-content: center;
@@ -67,6 +76,10 @@
                 margin: 0rem 2rem;
                 max-width: 6.5rem;
                 cursor: pointer;
+            }
+
+            img:hover {
+                opacity: 75%;
             }
         }
     }

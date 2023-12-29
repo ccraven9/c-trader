@@ -11,6 +11,7 @@ import { ChipModule } from 'primeng/chip';
 import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
 import { MenuModule } from 'primeng/menu';
 import { TagModule } from 'primeng/tag';
+import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { TagModule } from 'primeng/tag';
     DataViewModule,
     MenuModule,
     TagModule,
+    ToastModule,
   ],
   providers: [
     DataViewLayoutOptions

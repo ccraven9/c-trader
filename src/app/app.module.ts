@@ -35,7 +35,6 @@ import { AuctionPageComponent } from './pages/auction-page/auction-page.componen
     PrimengModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
