@@ -16,6 +16,7 @@ import { SearchResultsPageComponent } from './pages/search-results-page/search-r
 import { AuctionPageComponent } from './pages/auction-page/auction-page.component';
 import { SearchResultMenuComponent } from './components/search-result-menu/search-result-menu.component';
 import { YugiohListingService } from './services/yugioh-listing.service';
+import { AuctionListItemComponent } from './components/auction-list-item/auction-list-item.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { YugiohListingService } from './services/yugioh-listing.service';
     DisplayCardComponent,
     SearchResultsPageComponent,
     AuctionPageComponent,
-    SearchResultMenuComponent
+    SearchResultMenuComponent,
+    AuctionListItemComponent
   ],
   imports: [
     BrowserModule,
