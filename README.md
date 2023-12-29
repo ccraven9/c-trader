@@ -1,5 +1,7 @@
 # CTrader
 
+Collectible Trader is the prototype application for an auction website that exclusivley hosts trading card content.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
 ## Development server
@@ -7,6 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm run local` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 The node server will run at `http://127.0.0.1:3000/` and a response can be viewed in the browser by accessing `/get-cards`
+
+Alternativley, you can run `ng serve` to only run the UI, and navigate to `http://localhost:4200/`
 
 ## Code scaffolding
 
