@@ -8,7 +8,10 @@
 
 .search-header__ct-name {
     font-size: 2rem;
+    cursor: pointer;
 }
+
+
 
 .search-header__search-bar {
     margin: 0 1rem;
