@@ -12,6 +12,7 @@ import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
 import { MenuModule } from 'primeng/menu';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
+import { MenubarModule } from 'primeng/menubar';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ToastModule } from 'primeng/toast';
     MenuModule,
     TagModule,
     ToastModule,
+    MenubarModule,
   ],
   providers: [
     DataViewLayoutOptions
