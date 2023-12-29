@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-display-card',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class DisplayCardComponent {
 
+  constructor(private router: Router) {}
+
   listingTitle = '';
   setPrefix = '';
   totalBids = 0;
@@ -14,5 +17,9 @@ export class DisplayCardComponent {
   timeRemaining: string = "";
   imageArt: string= "";
   description = "";
+
+  navigateToAuction() {
+    this.router.navigate(['auction']);
+  }
 
 }

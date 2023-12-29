@@ -13,6 +13,7 @@ import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component
 import { PrimengModule } from './modules/primeng.module';
 import { DisplayCardComponent } from './components/card-display-feature/display-card/display-card.component';
 import { SearchResultsPageComponent } from './pages/search-results-page/search-results-page.component';
+import { AuctionPageComponent } from './pages/auction-page/auction-page.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SearchResultsPageComponent } from './pages/search-results-page/search-r
     LandingPageComponent,
     SignUpPageComponent,
     DisplayCardComponent,
-    SearchResultsPageComponent
+    SearchResultsPageComponent,
+    AuctionPageComponent
   ],
   imports: [
     BrowserModule,

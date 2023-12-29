@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-results-page',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-results-page.component.css']
 })
 export class SearchResultsPageComponent {
+
+  constructor( private router: Router ) {}
 
   products = [
     {
@@ -72,5 +75,9 @@ export class SearchResultsPageComponent {
       previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
       condition: 'Mint Condition'
     },]
+
+    navigateToAuction() {
+      this.router.navigate(['auction'])
+    }
 
 }

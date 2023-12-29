@@ -8,8 +8,7 @@
                 <div class="auction-list-item">
                     <div>
                         <img class="auction-list-item__thumbnail-image" alt="Card"
-                            src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />
-                            
+                            src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />  
                     </div>
                     <div class="auction-list-item__listing-information">
                         <h1>{{product.listingTitle}}</h1>
@@ -21,7 +20,7 @@
                         <p>Current Bid: <p-chip>{{ product.currentPrice | currency }}</p-chip> </p>
                         <p>Total Bids: <p-chip>{{ product.totalBids }}</p-chip> </p>
                         <p>Time Remaning: <p-chip>{{ product.timeRemaining }}</p-chip> </p>
-                        <p-button label="Bid Now"></p-button>
+                        <p-button (click)="navigateToAuction()" label="Bid Now"></p-button>
                     </div>
                 </div>
             </div>
