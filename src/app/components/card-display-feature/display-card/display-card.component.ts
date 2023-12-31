@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { YuGiOhCardListing } from 'src/app/models/yugioh-auction.model';
+import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
 
 @Component({
   selector: 'app-display-card',
@@ -8,15 +10,9 @@ import { Router } from '@angular/router';
 })
 export class DisplayCardComponent {
 
-  constructor(private router: Router) {}
+  @Input() featuredListing!: YuGiOhCardListing;
 
-  listingTitle = '';
-  setPrefix = '';
-  totalBids = 0;
-  currentPrice = 0.0;
-  timeRemaining: string = "";
-  imageArt: string= "";
-  description = "";
+  constructor(private router: Router) {}
 
   navigateToAuction() {
     this.router.navigate(['auction']);

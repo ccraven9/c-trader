@@ -17,7 +17,7 @@ export class SearchResultsPageComponent {
   }
 
   navigateToAuction() {
-    this.router.navigate(['auction'])
+    this.router.navigate(['auction']);
   }
 
 }
