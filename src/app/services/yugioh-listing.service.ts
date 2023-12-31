@@ -22,7 +22,7 @@ export class YugiohListingService {
       listingSeller: 'GooberMcGooberson'
     }
 
-    this.yugiohListings = [bewdListing, bewdListing];
+    this.yugiohListings = [bewdListing, bewdListing, bewdListing, bewdListing];
    }
 
    getAuctionListings(){

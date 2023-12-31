@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { YuGiOhCardListing } from 'src/app/models/yugioh-auction.model';
+import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
 
 @Component({
   selector: 'app-display-card',
@@ -7,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./display-card.component.css']
 })
 export class DisplayCardComponent {
+
+  @Input() featuredListing!: YuGiOhCardListing
 
   constructor(private router: Router) {}
 
