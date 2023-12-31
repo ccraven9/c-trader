@@ -10,7 +10,7 @@ import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
 })
 export class DisplayCardComponent {
 
-  @Input() featuredListing!: YuGiOhCardListing
+  @Input() featuredListing!: YuGiOhCardListing;
 
   constructor(private router: Router) {}
 

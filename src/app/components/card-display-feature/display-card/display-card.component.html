@@ -1,22 +1,21 @@
-<p-card header="Blue Eyes White Dragon" subheader="SDK-001" [style]="{ width: '360px' }">
+<p-card [header]="featuredListing.listingTitle" [subheader]="featuredListing.setPrefix" [style]="{ width: '360px' }">
     <ng-template pTemplate="header">
         <div class="playing-card-container">
-            <img alt="Card" (click)="navigateToAuction()" src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />
+            <img alt="Card" (click)="navigateToAuction()" [src]="featuredListing.imageArt" />
         </div>
     </ng-template>
     <div class="listing-data">
-        <p-chip label="Bids: 4"></p-chip>
-        <p-chip label="Current: $100"></p-chip>
-        <p-chip label="Days: 3"></p-chip> 
+        <p-chip label="Bids: {{ featuredListing.totalBids}}"></p-chip>
+        <p-chip label="Current: {{ featuredListing.currentPrice | currency }}"></p-chip>
+        <p-chip label="Days: {{ featuredListing.timeRemaining }}"></p-chip> 
     </div>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis.
+        {{ featuredListing.previewDescription }}
     </p>
     <ng-template pTemplate="footer">
         <div class="bid-button">
             <p-button (click)="navigateToAuction()" label="Bid Now"></p-button>
         </div>
-       
         <!-- <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button> -->
     </ng-template>
 </p-card>

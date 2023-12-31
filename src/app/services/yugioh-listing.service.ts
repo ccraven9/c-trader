@@ -15,7 +15,7 @@ export class YugiohListingService {
       totalBids: 23,
       timeRemaining: 5,
       /* eslint-disable-next-line */
-      imageArt: "assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp",
+      imageArt: "assets/BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp",
       currentPrice: 24.50,
       previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
       condition: 'Mint Condition',
