@@ -1,9 +1,9 @@
 <div class="auction-header">
     <div class="title">
-        <h1>Auction Title</h1>
+        <h1>{{ featuredListing.listingTitle}}</h1>
         <img class="featured-image" alt="Card" src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />
         <div class="information-tags">
-            <p-tag>SDK-001</p-tag>
+            <p-tag>{{ featuredListing.setPrefix }}</p-tag>
             <p-tag>Super Rare</p-tag>
             <p-tag>Mint Condition</p-tag>
         </div>
@@ -26,30 +26,23 @@
                 </div>
             </div>
             <div class="bid-input">
-                <div class="currency-display">13</div>
-                <div class="currency-display">$40.00</div>
+                <div class="currency-display">{{ featuredListing.totalBids }}</div>
+                <div class="currency-display">{{ featuredListing.currentPrice | currency}}</div>
                 <div>
-                    <input placeholder="$40.00" type="number" pInputText />
+                    <input [placeholder]="'$' +  featuredListing.currentPrice" type="number" pInputText />
                 </div>
             </div>
         </div>
         <div class="description">
             <p-card header="Seller Description">
                 <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+                    {{ featuredListing.previewDescription }}
                 </div>
             </p-card>
         </div>
         <div class="add-to-list">
             <p-toast position="top-center"></p-toast>
-            <!-- <p-button styleClass="p-button-info" (click)="showSavedToastMessage()" label="Save For Later"></p-button> -->
+            <p-button styleClass="p-button-info" (click)="showSavedToastMessage()" label="Save For Later"></p-button>
         </div>
         <div class="additonal-images-list">
             <p-card subheader="Additonal Images">

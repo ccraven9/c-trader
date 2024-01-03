@@ -7,26 +7,30 @@ import { YuGiOhCardListing } from '../models/yugioh-auction.model';
 export class YugiohListingService {
 
   private yugiohListings: YuGiOhCardListing[] = [];
+  private bewdListing: YuGiOhCardListing = {
+    listingTitle: 'Blue Eyes White Dragon',
+    setPrefix: 'SDK-001',
+    totalBids: 23,
+    timeRemaining: 5,
+    imageArt: "assets/BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp",
+    currentPrice: 24.50,
+    previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
+    condition: 'Mint Condition',
+    listingSeller: 'GooberMcGooberson'
+  }
 
   constructor() {
-    const bewdListing: YuGiOhCardListing = {
-      listingTitle: 'Blue Eyes White Dragon',
-      setPrefix: 'SDK-001',
-      totalBids: 23,
-      timeRemaining: 5,
-      /* eslint-disable-next-line */
-      imageArt: "assets/BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp",
-      currentPrice: 24.50,
-      previewDescription: 'This is a mint condition Blue Eyes from SDK-001.',
-      condition: 'Mint Condition',
-      listingSeller: 'GooberMcGooberson'
-    }
+   
 
-    this.yugiohListings = [bewdListing, bewdListing, bewdListing, bewdListing];
+    this.yugiohListings = [this.bewdListing, this.bewdListing, this.bewdListing, this.bewdListing];
    }
 
    getAuctionListings(){
     return this.yugiohListings;
+   }
+
+   getAuctionListing() { 
+    return this.bewdListing;
    }
 
 
