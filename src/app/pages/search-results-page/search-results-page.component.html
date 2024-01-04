@@ -6,11 +6,11 @@
             <div class="col-12">
                 <div class="auction-list-item">
                     <div>
-                        <img class="auction-list-item__thumbnail-image" alt="Card"
+                        <img (click)="navigateToAuction()" class="auction-list-item__thumbnail-image" alt="Card"
                             src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />  
                     </div>
                     <div class="auction-list-item__listing-information">
-                        <h1>{{product.listingTitle}}</h1>
+                        <h1 (click)="navigateToAuction()">{{product.listingTitle}}</h1>
                         <h3>{{ product.setPrefix }}</h3>
                         <p>{{ product.previewDescription }} </p>
                         <p-tag [value]=product.condition></p-tag>

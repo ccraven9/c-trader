@@ -1,0 +1,14 @@
+.user-profile-container {
+    margin: 2rem 10rem;
+
+    .p-card {
+        background-color: #ced4da;
+    }
+}
+
+
+
+.user-profile-image {
+    max-width: 4rem;
+}
+
