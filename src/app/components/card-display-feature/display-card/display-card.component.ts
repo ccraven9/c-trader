@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { YuGiOhCardListing } from 'src/app/models/yugioh-auction.model';
-import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
+import { YuGiOhCardListing } from '../../../models/yugioh-auction.model';
 
 @Component({
   selector: 'app-display-card',

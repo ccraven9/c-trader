@@ -6,6 +6,7 @@ import { SearchResultsPageComponent } from './search-results-page/search-results
 import { SellPageComponent } from './sell-page/sell-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { ComponentsModule } from '../components/components.module';
+import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 
 
 
@@ -15,7 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     LandingPageComponent,
     SearchResultsPageComponent,
     SellPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    UserProfilePageComponent
   ],
   imports: [
     CommonModule,

@@ -7,6 +7,7 @@ import { DisplayCardComponent } from './card-display-feature/display-card/displa
 import { SearchBarHeaderComponent } from './search-bar-header/search-bar-header.component';
 import { SearchResultMenuComponent } from './search-result-menu/search-result-menu.component';
 import { SubMenuBarComponent } from './sub-menu-bar/sub-menu-bar.component';
+import { UserProfileAuctionItemComponent } from './user-profile/user-profile-auction-item/user-profile-auction-item.component';
 
 const declaredComponents = [
   SearchBarHeaderComponent,
@@ -19,7 +20,8 @@ const declaredComponents = [
 
 @NgModule({
   declarations: [
-   ...declaredComponents
+   ...declaredComponents,
+   UserProfileAuctionItemComponent
   ],
   imports: [
     CommonModule,
