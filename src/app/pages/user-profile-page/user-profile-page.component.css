@@ -6,9 +6,30 @@
     }
 }
 
+.user-profile-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile__user-information {
+    width: 40%;
+}
+
+.user-profile__personal-message{
+    width: 30%;
+}
+
+.user-profile__contact{
+  margin-left: auto;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 
 .user-profile-image {
     max-width: 4rem;
 }
 
+.float-right{
+    float: right;
+}
