@@ -38,8 +38,23 @@
 
 .auction-list-item__bid-information {
     margin-left: auto;
+    display: flex;
     line-height: 2rem;
-    .p-chip {
-        color: black;
+
+    .bid-information__text {
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 1rem 0rem 0rem;
+        .static-text {
+            margin: .2rem 0rem;
+        }
+        .p-chip{
+            margin: .2rem 0rem;
+            color: black;
+        }
+        .bid-button{
+            margin: .8rem 0rem 0rem 0rem;
+        }
     }
+
 }

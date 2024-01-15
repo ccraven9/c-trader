@@ -7,7 +7,7 @@
                 <div class="auction-list-item">
                     <div>
                         <img (click)="navigateToAuction()" class="auction-list-item__thumbnail-image" alt="Card"
-                            src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />  
+                            src="assets\BlueEyesWhiteDragon-MAMA-EN-URPR-1E.webp" />
                     </div>
                     <div class="auction-list-item__listing-information">
                         <h1 (click)="navigateToAuction()">{{product.listingTitle}}</h1>
@@ -16,10 +16,17 @@
                         <p-tag [value]=product.condition></p-tag>
                     </div>
                     <div class="auction-list-item__bid-information">
-                        <p>Current Bid: <p-chip>{{ product.currentPrice | currency }}</p-chip> </p>
-                        <p>Total Bids: <p-chip>{{ product.totalBids }}</p-chip> </p>
-                        <p>Time Remaning: <p-chip>{{ product.timeRemaining }}</p-chip> </p>
-                        <p-button (click)="navigateToAuction()" label="Bid Now"></p-button>
+                        <div class="bid-information__text">
+                            <div class="static-text">Current Bid:</div>
+                            <div class="static-text">Total Bids:</div>
+                            <div class="static-text">Time Remaning:</div>
+                        </div>
+                        <div class="bid-information__text">
+                            <p-chip>{{ product.currentPrice | currency }}</p-chip>
+                            <p-chip>{{ product.totalBids }}</p-chip>
+                            <p-chip>{{ product.timeRemaining }}</p-chip>
+                            <p-button class="bid-button" (click)="navigateToAuction()" label="Bid Now"></p-button>
+                        </div>
                     </div>
                 </div>
             </div>
