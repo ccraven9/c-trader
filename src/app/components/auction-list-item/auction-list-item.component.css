@@ -27,6 +27,9 @@
             border: 1px solid #ced4da;
             border-radius: 0.375rem;
             margin-bottom: 2rem;
+            p{
+                cursor: pointer;
+            }
 
             .seller-chips {
                 p-chip {
@@ -76,6 +79,8 @@
 
             img:hover {
                 opacity: 75%;
+                position: relative;
+                top: -1rem;
             }
         }
     }

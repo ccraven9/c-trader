@@ -20,7 +20,13 @@
     padding: 1rem;
     background-color: #0a10141f;
     box-shadow: 0 2px 2px #0a10143d, 0 0 2px #0a10141f;
+}
 
+.auction-list-item__thumbnail-image:hover {
+    transform: scale(2.5);
+    position: relative;
+    top: 5rem;
+    left: 5rem;
 }
 
 .auction-list-item__listing-information {
