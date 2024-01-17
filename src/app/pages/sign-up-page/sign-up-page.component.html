@@ -1,38 +1,30 @@
 <app-search-bar-header></app-search-bar-header>
 
-
-<div class="sign-container">
-    <p-card *ngIf="!displaySignupForm" header="Sign In">
-        <div class="sign-in-form">
-            <p>
-                Already have an Account? Sign in here
-            </p>
+<div class="sign-up-container">
+    <p-card *ngIf="!displaySignupForm" class="sign-up-card">
+        <div class="sign-up-card__content">
+            <h2>Sign In</h2>
+            <p>Already have an Account? Sign in here</p>
             <label htmlFor="sign-in-username">Username:</label>
             <input class="form-input" id="sign-in-username" type="text" pInputText />
-
             <label htmlFor="sign-in-password">Password:</label>
-            <br>
             <p-password id="sign-in-password" [feedback]="false"></p-password>
             <p-button label="Login"></p-button>
-        </div>
-        <p-divider></p-divider>
-        <div>
+            <p-divider></p-divider>
             <p>Or Signup</p>
             <label htmlFor="username">Email:</label>
             <input class="form-input" id="email" type="text" pInputText />
+            <!-- <small id="username-help">Please enter a valid email.</small> -->
             <p-button label="Next" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
         </div>
     </p-card>
-    <p-card *ngIf="displaySignupForm" header="Sign Up">
-        <div class="sign-up-form">
-            <p>
-                Create a new account
-            </p>
-            <label htmlFor="sign-up-username">Username:</label>
+    <p-card *ngIf="displaySignupForm" class="sign-up-card">
+        <div class="sign-up-card__content">
+            <h2>Sign Up</h2>
+            <p>Create a new account</p>
+            <label htmlFor="sign-in-username">Username:</label>
             <input class="form-input" id="sign-up-username" placeholder="Create a username..." type="text" pInputText />
-
             <label htmlFor="sign-up-password">Password:</label>
-            <br>
             <p-password id="sign-up-password" [feedback]="false" placeholder="Create a password..."></p-password>
             <p-button class="sign-up-button" label="Submit" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
         </div>

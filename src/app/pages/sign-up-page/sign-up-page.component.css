@@ -1,12 +1,23 @@
-.sign-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
+.sign-up-container {
+    margin: 5rem 40rem;
 }
 
-.form-input {
-    width: 100%;
+.sign-up-card__content {
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        align-self: center;
+    }
+
+    p{
+        align-self: center;
+    }
+
+    p-button{
+        align-self: center;
+        margin: 1.25rem 0rem 0rem 0rem;
+    }
 }
 
 p-password {
@@ -18,4 +29,3 @@ p-password {
     }
    
 }
-
