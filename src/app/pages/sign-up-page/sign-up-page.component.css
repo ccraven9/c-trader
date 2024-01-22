@@ -18,6 +18,11 @@
         align-self: center;
         margin: 1.25rem 0rem 0rem 0rem;
     }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 p-password {

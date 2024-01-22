@@ -12,21 +12,28 @@
             <p-button label="Login"></p-button>
             <p-divider></p-divider>
             <p>Or Signup</p>
-            <label htmlFor="username">Email:</label>
-            <input class="form-input" id="email" type="text" pInputText />
-            <!-- <small id="username-help">Please enter a valid email.</small> -->
-            <p-button label="Next" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
+            <form [formGroup]="signupFormEmail" (ngSubmit)="onSignupEmailSubmit()">
+                <label htmlFor="username">Email:</label>
+                <input class="form-input" formControlName="email" name="email" id="email" type="text" pInputText />
+                <small *ngIf="showEmailHelper" id="username-help">Please enter a valid email.</small>
+                <p-button type="submit" label="Next" styleClass="p-button-info"></p-button>
+            </form>
         </div>
     </p-card>
     <p-card *ngIf="displaySignupForm" class="sign-up-card">
         <div class="sign-up-card__content">
             <h2>Sign Up</h2>
             <p>Create a new account</p>
-            <label htmlFor="sign-in-username">Username:</label>
-            <input class="form-input" id="sign-up-username" placeholder="Create a username..." type="text" pInputText />
-            <label htmlFor="sign-up-password">Password:</label>
-            <p-password id="sign-up-password" [feedback]="false" placeholder="Create a password..."></p-password>
-            <p-button class="sign-up-button" label="Submit" styleClass="p-button-info" (click)="showSignupForm()"></p-button>
+            <form [formGroup]="signupFormUserAndPass" (ngSubmit)="onSignupUserAndPassSubmit()">
+                <label htmlFor="sign-in-username">Username:</label>
+                <input class="form-input" name="signup_username" id="sign-up-username" type="text" pInputText />
+                <label htmlFor="sign-up-password">Password:</label>
+                <p-password id="sign-up-password" name="signup_password" [feedback]="false"></p-password>
+                <label htmlFor="sign-up-password">Confirm Password:</label>
+                <p-password id="confirm-sign-up-password" name="signup_passwordConfirm" [feedback]="false"></p-password>
+                <p-button class="sign-up-button" label="Submit" styleClass="p-button-info"
+                    (click)="showSignupForm()"></p-button>
+            </form>
         </div>
     </p-card>
 </div>
