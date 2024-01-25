@@ -26,13 +26,13 @@
             <p>Create a new account</p>
             <form [formGroup]="signupFormUserAndPass" (ngSubmit)="onSignupUserAndPassSubmit()">
                 <label htmlFor="sign-in-username">Username:</label>
-                <input class="form-input" name="signup_username" id="sign-up-username" type="text" pInputText />
+                <input class="form-input" name="signup_username" formControlName="username" id="sign-up-username" type="text" pInputText />
                 <label htmlFor="sign-up-password">Password:</label>
-                <p-password id="sign-up-password" name="signup_password" [feedback]="false"></p-password>
+                <p-password id="sign-up-password" name="signup_password" formControlName="password"  [feedback]="false"></p-password>
                 <label htmlFor="sign-up-password">Confirm Password:</label>
-                <p-password id="confirm-sign-up-password" name="signup_passwordConfirm" [feedback]="false"></p-password>
-                <p-button class="sign-up-button" label="Submit" styleClass="p-button-info"
-                    (click)="showSignupForm()"></p-button>
+                <p-password id="confirm-sign-up-password" name="signup_passwordConfirm" formControlName="confirmPassword" [feedback]="false"></p-password>
+                <small *ngIf="showPasswordNotMatching" id="username-help">Password entered does not match.</small>
+                <p-button type="submit" class="sign-up-button" label="Submit" styleClass="p-button-info"></p-button>
             </form>
         </div>
     </p-card>
