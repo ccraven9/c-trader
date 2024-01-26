@@ -12,12 +12,8 @@ export class SearchResultsPageComponent {
 
   products: YuGiOhCardListing[];
 
-  constructor(private router: Router, private yugiListService: YugiohListingService) {
+  constructor(private yugiListService: YugiohListingService) {
     this.products = this.yugiListService.getAuctionListings();
-  }
-
-  navigateToAuction() {
-    this.router.navigate(['auction']);
   }
 
 }
