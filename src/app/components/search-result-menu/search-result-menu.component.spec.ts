@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchResultMenuComponent } from './search-result-menu.component';
+import { PrimengModule } from 'src/app/modules/primeng.module';
 
 describe('SearchResultMenuComponent', () => {
   let component: SearchResultMenuComponent;
@@ -8,7 +9,8 @@ describe('SearchResultMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchResultMenuComponent ]
+      declarations: [ SearchResultMenuComponent ],
+      imports: [PrimengModule]
     })
     .compileComponents();
 

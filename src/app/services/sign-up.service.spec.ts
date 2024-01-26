@@ -15,6 +15,6 @@ describe('SignUpService', () => {
   });
 
   it('should not allow banned usernames', () => {
-    expect(service.isUsernameAllowed('admin')).toBeTrue();
+    expect(service.isUsernameAllowed('admin')).toBeFalse();
   })
 });
