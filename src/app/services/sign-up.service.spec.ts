@@ -13,4 +13,8 @@ describe('SignUpService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should not allow banned usernames', () => {
+    expect(service.isUsernameAllowed('admin')).toBeTrue();
+  })
 });
