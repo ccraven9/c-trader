@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuctionListItemComponent } from './auction-list-item.component';
+import { MessageService } from 'primeng/api';
+import { PrimengModule } from 'src/app/modules/primeng.module';
 
 describe('AuctionListItemComponent', () => {
   let component: AuctionListItemComponent;
@@ -8,7 +10,9 @@ describe('AuctionListItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuctionListItemComponent ]
+      declarations: [ AuctionListItemComponent ],
+      imports: [ PrimengModule ],
+      providers: [ MessageService ]
     })
     .compileComponents();
 
