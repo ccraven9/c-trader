@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SellPageComponent } from './sell-page.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 describe('SellPageComponent', () => {
   let component: SellPageComponent;
@@ -8,7 +9,8 @@ describe('SellPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SellPageComponent ]
+      declarations: [ SellPageComponent ],
+      imports: [ ComponentsModule ]
     })
     .compileComponents();
 

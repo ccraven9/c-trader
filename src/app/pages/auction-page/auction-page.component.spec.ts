@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuctionPageComponent } from './auction-page.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 describe('AuctionPageComponent', () => {
   let component: AuctionPageComponent;
@@ -8,7 +9,8 @@ describe('AuctionPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuctionPageComponent ]
+      declarations: [ AuctionPageComponent ],
+      imports: [ComponentsModule]
     })
     .compileComponents();
 

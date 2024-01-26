@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DisplayCardComponent } from './display-card.component';
+import { PrimengModule } from 'src/app/modules/primeng.module';
 
 describe('DisplayCardComponent', () => {
   let component: DisplayCardComponent;
@@ -8,7 +9,8 @@ describe('DisplayCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayCardComponent ]
+      declarations: [ DisplayCardComponent ],
+      imports: [PrimengModule]
     })
     .compileComponents();
 
