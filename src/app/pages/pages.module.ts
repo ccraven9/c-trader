@@ -7,6 +7,7 @@ import { SellPageComponent } from './sell-page/sell-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { ComponentsModule } from '../components/components.module';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,11 +18,12 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
     SearchResultsPageComponent,
     SellPageComponent,
     SignUpPageComponent,
-    UserProfilePageComponent
+    UserProfilePageComponent,
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }
