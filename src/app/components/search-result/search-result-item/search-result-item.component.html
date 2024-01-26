@@ -1,0 +1,25 @@
+<div class="auction-list-item">
+    <div>
+        <img (click)="navigateToAuction()" class="auction-list-item__thumbnail-image" alt="Card"
+            [src]="listingItem.imageArt" />
+    </div>
+    <div class="auction-list-item__listing-information">
+        <h1 (click)="navigateToAuction()">{{listingItem.listingTitle}}</h1>
+        <h3>{{ listingItem.setPrefix }}</h3>
+        <p>{{ listingItem.previewDescription }} </p>
+        <p-tag [value]=listingItem.condition></p-tag>
+    </div>
+    <div class="auction-list-item__bid-information">
+        <div class="bid-information__text">
+            <div class="static-text">Current Bid:</div>
+            <div class="static-text">Total Bids:</div>
+            <div class="static-text">Time Remaning:</div>
+        </div>
+        <div class="bid-information__text">
+            <p-chip>{{ listingItem.currentPrice | currency }}</p-chip>
+            <p-chip>{{ listingItem.totalBids }}</p-chip>
+            <p-chip>{{ listingItem.timeRemaining }}</p-chip>
+            <p-button class="bid-button" (click)="navigateToAuction()" label="Bid Now"></p-button>
+        </div>
+    </div>
+</div>
