@@ -9,16 +9,21 @@ export class SignUpService {
 
   constructor() { }
 
-  signupNewUser(email: string, username: string, password:string) {
-    console.log('New user signed up with username:', username)
-  }
-
-  checkUsername(username: string) {
-    if( this.bannedUsernameList.includes(username)) {
-
+  signupNewUser(email: string, username: string, password: string) {
+    if (this.isUsernameAllowed(username)) {
+      console.log('New User was created!')
+      //mock submit to database.
     }
   }
-  
+
+  isUsernameAllowed(username: string): boolean {
+    if (this.bannedUsernameList.includes(username)) {
+      return false;
+    }
+
+    return true;
+  }
+
 
 
 

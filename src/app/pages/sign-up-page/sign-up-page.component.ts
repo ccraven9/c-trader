@@ -34,7 +34,6 @@ export class SignUpPageComponent {
     );
   }
 
-
   showSignupForm() {
     this.displaySignupForm = true;
   }
@@ -66,5 +65,4 @@ export class SignUpPageComponent {
       this.signupService.signupNewUser(this.userEmail, userNameValue, passwordValue);
     }
   }
-
 }
