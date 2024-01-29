@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SignInService } from 'src/app/services/sign-in.service';
 import { SignUpService } from 'src/app/services/sign-up.service';
 
 
@@ -14,11 +15,12 @@ export class SignUpPageComponent {
   displaySignupForm = false;
   showEmailHelper = false;
   showPasswordNotMatching = false;
+  signInForm: FormGroup;
   signupFormEmail: FormGroup;
   signupFormUserAndPass: FormGroup;
   private userEmail!: string;
 
-  constructor(private fb: FormBuilder, private signupService: SignUpService) {
+  constructor(private fb: FormBuilder, private signupService: SignUpService, private signInService: SignInService) {
     this.signupFormEmail = this.fb.group(
       {
         email: ['', [Validators.required, Validators.email]]
@@ -30,6 +32,13 @@ export class SignUpPageComponent {
         username: ['', [Validators.required]],
         password: ['', [Validators.required]],
         confirmPassword: ['', Validators.required]
+      }
+    );
+
+    this.signInForm = this.fb.group(
+      {
+        signInUsername: ['', [Validators.required]],
+        signInPassword: ['', [Validators.required]]
       }
     );
   }
@@ -63,6 +72,15 @@ export class SignUpPageComponent {
       }
 
       this.signupService.signupNewUser(this.userEmail, userNameValue, passwordValue);
+    }
+  }
+
+  onSignIn() {
+    if (!this.signInForm.invalid) {
+      const signInUsername = this.signInForm.get('signInUsername')?.value;
+      const signInPassword = this.signInForm.get('signInPassword')?.value;
+
+      this.signInService.signInUser(signInUsername, signInPassword)
     }
   }
 }

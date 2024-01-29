@@ -5,11 +5,13 @@
         <div class="sign-up-card__content">
             <h2>Sign In</h2>
             <p>Already have an Account? Sign in here</p>
-            <label htmlFor="sign-in-username">Username:</label>
-            <input class="form-input" id="sign-in-username" type="text" pInputText />
-            <label htmlFor="sign-in-password">Password:</label>
-            <p-password id="sign-in-password" [feedback]="false"></p-password>
-            <p-button label="Login"></p-button>
+            <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+                <label htmlFor="sign-in-username">Username:</label>
+                <input class="form-input" formControlName="signInUsername" name="signInUsername" id="sign-in-username" type="text" pInputText />
+                <label htmlFor="sign-in-password">Password:</label>
+                <p-password id="sign-in-password" formControlName="signInPassword" name="signInPassword" [feedback]="false"></p-password>
+                <p-button type="submit" label="Login"></p-button>
+            </form>
             <p-divider></p-divider>
             <p>Or Signup</p>
             <form [formGroup]="signupFormEmail" (ngSubmit)="onSignupEmailSubmit()">
@@ -26,11 +28,14 @@
             <p>Create a new account</p>
             <form [formGroup]="signupFormUserAndPass" (ngSubmit)="onSignupUserAndPassSubmit()">
                 <label htmlFor="sign-in-username">Username:</label>
-                <input class="form-input" name="signup_username" formControlName="username" id="sign-up-username" type="text" pInputText />
+                <input class="form-input" name="signup_username" formControlName="username" id="sign-up-username"
+                    type="text" pInputText />
                 <label htmlFor="sign-up-password">Password:</label>
-                <p-password id="sign-up-password" name="signup_password" formControlName="password"  [feedback]="false"></p-password>
+                <p-password id="sign-up-password" name="signup_password" formControlName="password"
+                    [feedback]="false"></p-password>
                 <label htmlFor="sign-up-password">Confirm Password:</label>
-                <p-password id="confirm-sign-up-password" name="signup_passwordConfirm" formControlName="confirmPassword" [feedback]="false"></p-password>
+                <p-password id="confirm-sign-up-password" name="signup_passwordConfirm"
+                    formControlName="confirmPassword" [feedback]="false"></p-password>
                 <small *ngIf="showPasswordNotMatching" id="username-help">Password entered does not match.</small>
                 <p-button type="submit" class="sign-up-button" label="Submit" styleClass="p-button-info"></p-button>
             </form>
