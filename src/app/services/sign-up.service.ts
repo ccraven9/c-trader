@@ -20,7 +20,6 @@ export class SignUpService {
     if (this.bannedUsernameList.includes(username)) {
       return false;
     }
-
     return true;
   }
 
