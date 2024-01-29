@@ -14,10 +14,13 @@ export class SignInService {
    }
 
   signInUser(username: string, password: string) {
+    //Mock user verification
     const usrName = username;
     const userPass = password;
     if(this.validateUser(usrName, userPass)) {
       this.isLoggedIn = true;
+      this.isLoggedInSubject.next(this.isLoggedIn);
+      console.log('User succsefully signed in');
     }
   }
 

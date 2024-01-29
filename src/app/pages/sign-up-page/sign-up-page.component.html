@@ -5,12 +5,12 @@
         <div class="sign-up-card__content">
             <h2>Sign In</h2>
             <p>Already have an Account? Sign in here</p>
-            <form>
+            <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
                 <label htmlFor="sign-in-username">Username:</label>
-                <input class="form-input" id="sign-in-username" type="text" pInputText />
+                <input class="form-input" formControlName="signInUsername" name="signInUsername" id="sign-in-username" type="text" pInputText />
                 <label htmlFor="sign-in-password">Password:</label>
-                <p-password id="sign-in-password" [feedback]="false"></p-password>
-                <p-button label="Login"></p-button>
+                <p-password id="sign-in-password" formControlName="signInPassword" name="signInPassword" [feedback]="false"></p-password>
+                <p-button type="submit" label="Login"></p-button>
             </form>
             <p-divider></p-divider>
             <p>Or Signup</p>

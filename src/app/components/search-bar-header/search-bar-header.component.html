@@ -4,5 +4,7 @@
         <input class="search-header__search-bar" placeholder="Search for cards" type="text" (keydown.enter)="navigateToSearchResultsPage()" pInputText />
         <p-button label="Sell" (click)="navigateToSellPage()"></p-button>
     </span>
-    <p-button label="Signup" (click)="navigateToSignUpPage()"></p-button>
+    <p-button *ngIf="!signedIn" label="Signup" (click)="navigateToSignUpPage()"></p-button>
+    <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    <p-button *ngIf="signedIn" label="Profile" (click)="menu.toggle($event)"></p-button>
 </div>
