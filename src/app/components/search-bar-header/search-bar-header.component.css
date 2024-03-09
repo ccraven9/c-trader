@@ -9,6 +9,7 @@
 .search-header__ct-name {
     font-size: 2rem;
     cursor: pointer;
+    font-weight: 600;
 }
 
 
