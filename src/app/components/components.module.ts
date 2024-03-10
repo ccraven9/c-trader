@@ -18,7 +18,7 @@ const declaredComponents = [
   SearchResultMenuComponent,
   AuctionListItemComponent,
   UserProfileAuctionItemComponent,
-   SearchResultItemComponent
+  SearchResultItemComponent
 ]
 
 @NgModule({

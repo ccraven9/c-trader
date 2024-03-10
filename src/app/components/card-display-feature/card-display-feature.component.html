@@ -1,10 +1,12 @@
 <div class="card-container">
     <p-fieldset class="card-container__fieldset" legend="Yu-Gi-Oh">
-        <div  class="featured-content">    
+        <div class="featured-content">    
             <app-display-card *ngFor="let featuredListing of yugiohFeaturedListings" [featuredListing]="featuredListing"  class="card-preview"></app-display-card>
         </div>
     </p-fieldset>
-    <p-fieldset class="card-container__fieldset" legend="Category 2">
-        Content
+    <p-fieldset class="card-container__fieldset" legend="Pokemon">
+        <div class="featured-content">
+            <app-display-card *ngFor="let featuredListing of pokemonFeaturedListings" [featuredListing]="featuredListing"  class="card-preview"></app-display-card>
+        </div>
     </p-fieldset>
 </div>

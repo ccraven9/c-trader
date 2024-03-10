@@ -20,16 +20,14 @@ export class YugiohListingService {
   }
 
   constructor() {
-   
-
     this.yugiohListings = [this.bewdListing, this.bewdListing, this.bewdListing, this.bewdListing];
    }
 
-   getAuctionListings(){
+   getAuctionListings(): YuGiOhCardListing[]{
     return this.yugiohListings;
    }
 
-   getAuctionListing() { 
+   getAuctionListing(): YuGiOhCardListing { 
     return this.bewdListing;
    }
 

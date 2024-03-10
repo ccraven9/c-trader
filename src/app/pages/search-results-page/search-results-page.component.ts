@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { YuGiOhCardListing } from 'src/app/models/yugioh-auction.model';
-import { YugiohListingService } from 'src/app/services/yugioh-listing.service';
+import { AllListingsService } from 'src/app/services/all-listings.service';
 
 @Component({
   selector: 'app-search-results-page',
@@ -12,8 +11,8 @@ export class SearchResultsPageComponent {
 
   products: YuGiOhCardListing[];
 
-  constructor(private yugiListService: YugiohListingService) {
-    this.products = this.yugiListService.getAuctionListings();
+  constructor(private aListingService: AllListingsService) {
+    this.products = this.aListingService.getAllListings();
   }
 
 }
