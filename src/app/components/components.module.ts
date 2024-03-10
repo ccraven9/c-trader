@@ -9,6 +9,7 @@ import { SearchResultMenuComponent } from './search-result-menu/search-result-me
 import { SubMenuBarComponent } from './sub-menu-bar/sub-menu-bar.component';
 import { UserProfileAuctionItemComponent } from './user-profile/user-profile-auction-item/user-profile-auction-item.component';
 import { SearchResultItemComponent } from './search-result/search-result-item/search-result-item.component';
+import { PokeDisplayCardComponent } from './card-display-feature/poke-display-card/poke-display-card.component';
 
 const declaredComponents = [
   SearchBarHeaderComponent,
@@ -24,6 +25,7 @@ const declaredComponents = [
 @NgModule({
   declarations: [
    ...declaredComponents,
+   PokeDisplayCardComponent,
   ],
   imports: [
     CommonModule,
